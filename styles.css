@@ -135,58 +135,6 @@
     padding: 20px ;
     /* z-index:0 ; */
 }
-.circle1{
-    position: absolute;
-    top: 5%;
-    left: 30%;
-    
-    width: 13em;
-    height: 13em;
-    border-radius: 50%;
-    background: linear-gradient(-25deg, #d84869, #f46641);
-    box-shadow: 0px 0px 50px #d84869;
-
-    animation: roundanimation 15s infinite ;
-}
-
-@keyframes roundanimation{
-    0%{
-        transform: scale(1) ;
-    }
-    50%{
-        transform: scale(1.05) translateX(50px) translateY(-10px);
-    }
-    100%{
-        transform: scale(1) ;
-    }
-}
-
-.circle2{
-    position: absolute;
-  bottom: 5%;
-  right: 30%;
-  width: 19em;
-  height: 19em;
-  border-radius: 50%;
-  box-shadow: 0 0 50px #5648d8;
-  background: linear-gradient(-25deg, #5648d8, #8641f4);
-  animation: circle2Animate 20s infinite;
-}
-@keyframes circle2Animate {
-    0%{
-        transform: scale(1) ;
-    }
-    33%{
-        transform: scale(1.01) translateX(30px) translateY(10px);
-    }
-    100%{
-        transform: scale(1) ;
-    }
-}
-
-.img img{
-    border-radius: 9999px;
-}
 
 .name{
     color: white;
@@ -232,7 +180,7 @@
     backdrop-filter: blur(15px);
     border: 2px solid #ffffff30;
     border-radius: 12px;
-    width: 500px;
+    width: 600px;
     scale: 0;
     transition: 0.5s ease-in-out;
     z-index: 1;
@@ -250,7 +198,7 @@
     margin: 0 10px ;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 .modal-1{
@@ -272,7 +220,7 @@ hr{
 
 .icon{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(8,1fr);
     
     justify-items:center;
     justify-self:center;
@@ -357,4 +305,52 @@ svg{
     cursor: pointer;
     padding: 5px 20px;
     border-radius: 0 4px 4px 0;
+}
+
+.modal-follow{
+    position: fixed; /* imp */
+    background: #00000041;
+    backdrop-filter: blur(15px);
+    border:  2px solid #66817f;
+    border-radius: 12px;
+    width: 500px;
+    scale: 0;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+    display: flex;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px 0 40px 0;
+}
+.follow-container{
+    padding: 20px;
+}
+.follow-text{
+    color: white;
+    margin-bottom: 10px;
+}
+.follow-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cross1{
+    color: white;
+    cursor: pointer;
+}
+.cross:hover{
+    color:#e1e1e1;
+}
+.cross1:hover{
+    color:#e1e1e1;
+}
+.follow-icon{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+.activeFollow{
+    scale: 1;
 }

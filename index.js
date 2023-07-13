@@ -6,14 +6,32 @@ let overlay=document.querySelector(".overlay");
 let openModal= function(){
     console.log("open modal");
     modal.classList.add("active");
-    overlay.classList.add("overlayactive")
+    overlay.classList.add("overlayactive");
+    followmodal.classList.remove("activeFollow");
 }
 
 let closeModal= function(){
     console.log("close modal");
     modal.classList.remove("active");
     overlay.classList.remove("overlayactive");
+    followmodal.classList.remove("activeFollow");
 }
+
+// follow me
+
+let followmodal=document.querySelector(".modal-follow");
+let openFollow=function(){
+    followmodal.classList.add("activeFollow");
+    overlay.classList.add("overlayactive");
+}
+let closeFollow=function(){
+    followmodal.classList.remove("activeFollow");
+    overlay.classList.remove("overlayactive");
+}
+
+
+
+
 
 const myInp=document.querySelector(".copy-link-input");
 const btnCopy = document.querySelector(".copy-link-button");
@@ -33,12 +51,6 @@ btnCopy.addEventListener("click",function(){
     myInp.value = "Copied!";
     setTimeout(() => myInp.value = text,1000);
 })
-// https://api.whatsapp.com/send?text=[post-title] [post-url]
-// https://www.facebook.com/sharer.php?u=[post-url]
-// https://twitter.com/share?url=[post-url]&text=[post-title]&via=[via]&hashtags=[hashtags]
-// https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title]
-// https://reddit.com/submit?url=[post-url]&title=[post-title]
-
 const fb=document.querySelector("#facebook")
 const tw=document.querySelector("#twidtter")
 const ig=document.querySelector("#instagram")
