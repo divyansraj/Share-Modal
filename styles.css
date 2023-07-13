@@ -313,6 +313,7 @@ svg{
     backdrop-filter: blur(15px);
     border:  2px solid #66817f;
     border-radius: 12px;
+    
     width: 500px;
     scale: 0;
     transition: 0.5s ease-in-out;
@@ -320,7 +321,7 @@ svg{
     display: flex;
 
     flex-direction: column;
-    flex-wrap: wrap;
+
     padding: 10px 0 40px 0;
 }
 .follow-container{
@@ -353,4 +354,28 @@ svg{
 }
 .activeFollow{
     scale: 1;
+}
+
+@media (max-width: 514px){
+    .container{
+        margin: 2px;
+    }
+    .modal-follow{
+        width: auto;
+        display:flex;  
+        flex-wrap: wrap;
+        flex-direction: column; 
+        transform: scale(0.9);
+    
+    }
+    .modal-container{
+        width: fit-content;
+        transform: scale(0.9);
+        padding: 2px;
+    }
+    .icon{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
 }
