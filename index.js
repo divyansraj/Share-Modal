@@ -36,6 +36,7 @@ let closeFollow=function(){
 const myInp=document.querySelector(".copy-link-input");
 const btnCopy = document.querySelector(".copy-link-button");
 
+myInp.value=window.location.href;
 // btnCopy.onclick=function(){
 
 //     myInp.select();
